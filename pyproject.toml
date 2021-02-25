@@ -1,0 +1,30 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+dist-name = "wifi-scan"
+module = "wifi_scan"
+author = "Jesse London"
+author-email = "jesselondon@gmail.com"
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Topic :: System :: Networking",
+]
+description-file = "README.txt"
+home-page = "https://github.com/jesteria/wifi-scan"
+keywords = "iwlist"
+requires = [
+    "terminaltables == 3.1.0",
+]
+requires-python = ">=3.8"
+
+[tool.flit.scripts]
+wifi-scan = "wifi_scan:main"
+
+[tool.flit.sdist]
+exclude = [".gitignore"]
